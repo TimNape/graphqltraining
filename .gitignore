@@ -1,5 +1,6 @@
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
-
+node_modules
 /linkedin_graphql_essential_training/node_modules
+/linkedin_graphql_essential_training/.vs

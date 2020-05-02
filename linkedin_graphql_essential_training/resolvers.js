@@ -10,29 +10,20 @@ const friendDatabase = {};
 
 //const root = {hello: () => "Hi, I'm Tim"}; //root resolve
 
-const resolvers = {
-    friend: () => {
-    return {
-        "id": 342342,
-        "firstName": "John",
-        "lastName": "Due",
-        "gender": "Male",
-        "language": "English",
-        "email": "john@example.com"
+// resolver map, a graphql-tools concept
+export const resolvers = {
+    Query: {
+        getFriend: ({ id }) => {
+            return new Friend(id, friendDatabase[id]);
+        },
+    },
+    Mutation:{
+        createFriend: ({ input }) => {
+            let id = require('crypto').randomBytes(10).toString('hex');
+            friendDatabase[id] = input;
+            return new Friend(id, input);
         }
-    },
-
-    getFriend: ({ id }) => {
-        return new Friend(id, friendDatabase[id]);
-    },
-    createFriend: ({ input }) => {
-        let id = require('crypto').randomBytes(10).toString('hex');
-        friendDatabase[id] = input;
-        return new Friend(id, input);
     }
-
 };
 
-
-export default resolvers;
 

@@ -1,0 +1,22 @@
+mutation {
+    createFriend(input: {
+        firstName: "Emanuel"
+        lastName: "Henri"
+   
+        email: "john@example.com"
+      	age: 30,
+      	contacts: [
+          {firstName: "Lolo", lastName: "yeah"}
+          {firstName: "Lulu", lastName: "yo"}
+        ]
+        # non required fields can be left out
+    }){
+        # fields to return on creation
+        id
+        firstName
+    		contacts {
+          firstName
+          lastName
+        }
+    }
+}

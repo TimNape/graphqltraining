@@ -1,0 +1,11 @@
+query{
+  getFriend(id: "365a5d249286cbc0b67f"){
+    firstName
+    lastName
+    age
+    gender
+    contacts{
+      firstName
+    }
+  }
+}

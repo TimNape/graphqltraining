@@ -5,3 +5,4 @@ node_modules
 .vs
 /linkedin_graphql_essential_training/node_modules
 /linkedin_graphql_essential_training/.vs
+linkedin_graphql_essential_training/aliens.sqlite

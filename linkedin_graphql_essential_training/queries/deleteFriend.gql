@@ -1,0 +1,3 @@
+mutation {
+    deleteFriend(id:"365a5d249286cbc0b67f")
+}

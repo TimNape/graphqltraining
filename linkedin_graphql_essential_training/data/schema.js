@@ -34,10 +34,6 @@ type Email {
     email: String
 }
 
-type Query {
-    getFriend(id: ID): Friend
-}
-
 input FriendInput{
     id: ID
     firstName: String!
@@ -52,6 +48,11 @@ input FriendInput{
 input ContactInput{
     firstName: String
     lastName: String
+}
+
+type Query {
+    getOneFriend(id: ID!): Friend
+    getAliens: [Alien]
 }
 
 type Mutation {

@@ -1,0 +1,19 @@
+# to avoid repetitive typing
+
+query{
+  one: getOneFriend(id: "365a5d249286cbc0b67f"){
+    ...friendFragment
+  }
+    secondWithAge: getOneFriend(id: "365a5d249286cbc0b67f"){
+  	...friendFragment
+    age
+  }
+    third: getOneFriend(id: "365a5d249286cbc0b67f"){
+    ...friendFragment
+  }
+}
+
+fragment friendFragment on Friend{
+  firstName
+  lastName
+}

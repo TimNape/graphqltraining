@@ -1,0 +1,17 @@
+# to run multiple queries
+
+query{
+  one: getOneFriend(id: "665a5d249286cbc0b67e"){
+    firstName
+    lastName
+  }
+    secondWithAge: getOneFriend(id: "575a5d249286cbc0b67g"){
+    firstName
+    lastName
+    age
+  }
+    third: getOneFriend(id: "925a5d249286cbc0b67d"){
+    firstName
+    lastName
+  }
+}
